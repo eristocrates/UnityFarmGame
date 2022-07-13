@@ -4,33 +4,36 @@ using UnityEngine;
 
 public class GameGrid : MonoBehaviour
 {
+    //declarations for game baord creation
     public int columnLength, rowLength;
     public float x_Space, z_Space;
     public GameObject grass;
     public GameObject[] currentGrid;
     public bool gotGrid;
     
-   
+   //declarations for field creation
    public GameObject hitted;
    public GameObject field;
    private RaycastHit _Hit;
    public bool creatingFields;
 
-   //NEW
-
+   
+    //declarations for cursors
    public Texture2D basicCursor, fieldCursor;
    public CursorMode cursorMode = CursorMode.Auto;
    public Vector3 hotSpot = Vector3.zero;
 
-   //NEW END
+    //declartion for money system
+   public GameObject goldSystem;
+   public int fieldsPrice;
 
-   //NEW
+
+   //defaut cursor when game turns on
    void Awake()
    {
         Cursor.SetCursor(basicCursor, hotSpot, cursorMode);
    }
-   // NEW END
-   
+  
    
    
     void Start()
@@ -56,17 +59,20 @@ public class GameGrid : MonoBehaviour
             {
                 if(creatingFields == true)
                 {
-                    if(_Hit.transform.tag == "grid")
+                    if(_Hit.transform.tag == "grid" && goldSystem.GetComponent<GoldSystem>().gold >= fieldsPrice) //creats field and checks to see if player has money
                     {
                         hitted = _Hit.transform.gameObject;
                         Instantiate(field,hitted.transform.position, Quaternion.identity);
                         Destroy(hitted);
+
+                        goldSystem.GetComponent<GoldSystem>().gold -= fieldsPrice; //once field is purchase money goes lower
                     }
                 }
             }
             
         }
         
+        //when creating field mouse press cursor will change to appropiate cursor
         if(creatingFields == true)
             {
                 Cursor.SetCursor(fieldCursor, hotSpot, cursorMode); 
