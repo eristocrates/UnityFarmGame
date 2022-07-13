@@ -9,18 +9,28 @@ public class GameGrid : MonoBehaviour
     public GameObject grass;
     public GameObject[] currentGrid;
     public bool gotGrid;
-    // Start is called before the first frame update
-   
-   
-   
-   //New
+    
    
    public GameObject hitted;
    public GameObject field;
    private RaycastHit _Hit;
    public bool creatingFields;
+
+   //NEW
+
+   public Texture2D basicCursor, fieldCursor;
+   public CursorMode cursorMode = CursorMode.Auto;
+   public Vector3 hotSpot = Vector3.zero;
+
+   //NEW END
+
+   //NEW
+   void Awake()
+   {
+        Cursor.SetCursor(basicCursor, hotSpot, cursorMode);
+   }
+   // NEW END
    
-   //New End
    
    
     void Start()
@@ -38,8 +48,8 @@ public class GameGrid : MonoBehaviour
             gotGrid = true;
         }
 
-        //New
-
+        
+    // Button for creating feilds
         if(Input.GetMouseButtonDown (0))
         {
             if(Physics.Raycast (Camera.main.ScreenPointToRay(Input.mousePosition), out _Hit))
@@ -54,13 +64,18 @@ public class GameGrid : MonoBehaviour
                     }
                 }
             }
+            
         }
-
-        //New end
+        
+        if(creatingFields == true)
+            {
+                Cursor.SetCursor(fieldCursor, hotSpot, cursorMode); 
+            }
+        
 
     }
 
-    //new
+    
 
     public void CreateFields()
     {
@@ -72,5 +87,5 @@ public class GameGrid : MonoBehaviour
         creatingFields = false;
     }
 
-    //new end
+    
 }
