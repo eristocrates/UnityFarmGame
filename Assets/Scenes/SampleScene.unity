@@ -159,6 +159,9 @@ MonoBehaviour:
   grass: {fileID: 2249903395156480011, guid: 10f0bd02a92366d4b9bf619de017ad0b, type: 3}
   currentGrid: []
   gotGrid: 0
+  hitted: {fileID: 0}
+  field: {fileID: 2249903395156480011, guid: d99c944c5b7e6404a88c71e9b417aa7d, type: 3}
+  creatingFields: 0
 --- !u!4 &505987756
 Transform:
   m_ObjectHideFlags: 0
@@ -345,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 7.67, z: -13.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

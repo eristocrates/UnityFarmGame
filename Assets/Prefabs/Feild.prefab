@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4390745636034515753}
   - component: {fileID: 5181078387475688180}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Feild
   m_TagString: grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be75ae80d2f7587419c9c4a468b1431c, type: 2}
+  - {fileID: 2100000, guid: d68bd39dd200f864c98dbd1ceed40718, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
