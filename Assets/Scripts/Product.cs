@@ -7,18 +7,23 @@ using UnityEngine.UI;
 
 public class Product : MonoBehaviour
 {
-   
+
     public GameObject shop;
+    public GameObject goldSystem;
     public int id;
     public string productName;
     public int price;
     public Text nameText, priceText;
-   
-   
+    public static bool placeSeeds;
+    public static int whichSeed;
+    public static bool isSowing;
+
+
     // Start is called before the first frame update
     void Start()
     {
         shop = GameObject.Find("Shop");
+        goldSystem = GameObject.Find("Gold System");
         //productName = shop.GetComponent<Shop>().productName[id];
         //price = shop.GetComponent<Shop>().price[id];
     }
@@ -31,5 +36,15 @@ public class Product : MonoBehaviour
 
         productName = shop.GetComponent<Shop>().productName[id];
         price = shop.GetComponent<Shop>().price[id];
+    }
+    public void Buy()
+    {
+        if (goldSystem.GetComponent<GoldSystem>().gold >= price)
+        {
+            placeSeeds = true;
+            whichSeed = id;
+            goldSystem.GetComponent<GoldSystem>().gold -= price;
+            isSowing = true;
+        }
     }
 }

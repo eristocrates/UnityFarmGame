@@ -8,23 +8,24 @@ public class Shop : MonoBehaviour
 
     public int[] id;
     public string[] productName;
-    public int [] price;
-    
+    public int[] price;
+
     public int numberOfProducts;
     public GameObject shopWindow;
-    
+
     public GameObject[] products;
 
 
     public int pageNumber;
+    public static bool beInShop;
 
-    
-    
-    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i<9; i++)
+        for (int i = 0; i < 9; i++)
         {
             products[i].SetActive(false);
         }
@@ -36,12 +37,16 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Product.isSowing)
+        {
+            CloseShop();
+        }
     }
 
     public void OpenShop()
     {
         shopWindow.SetActive(true);
+        beInShop = true;
         Refresh();
 
     }
@@ -49,18 +54,19 @@ public class Shop : MonoBehaviour
     public void CloseShop()
     {
         shopWindow.SetActive(false);
+        beInShop = false;
     }
 
     public void Refresh()
     {
-        for(int i = 0; i<numberOfProducts; i++)
+        for (int i = 0; i < numberOfProducts; i++)
         {
             products[i].SetActive(false);
         }
 
-        if(pageNumber == 1)
+        if (pageNumber == 1)
         {
-            for(int i = 0; i<numberOfProducts; i++)
+            for (int i = 0; i < numberOfProducts; i++)
             {
                 products[i].GetComponent<Product>().id = id[i];
                 products[i].SetActive(true);

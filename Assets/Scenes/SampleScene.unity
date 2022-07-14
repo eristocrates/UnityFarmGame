@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
@@ -1333,7 +1334,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 432561381}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 971303662}
+        m_TargetAssemblyTypeName: Product, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &432561381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1893,6 +1906,7 @@ MonoBehaviour:
   creatingFields: 0
   basicCursor: {fileID: 2800000, guid: ea234c34fd9ad5d4c8e39b258d88dd7a, type: 3}
   fieldCursor: {fileID: 2800000, guid: 3f709dc9d8e07bd4c8622264c5cd881b, type: 3}
+  seedCursor: {fileID: 2800000, guid: d723ea0d7565175499d0c8aa2b3c8836, type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0, z: 0}
   goldSystem: {fileID: 966534053}
@@ -3232,14 +3246,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.67, z: -13.98}
+  m_LocalRotation: {x: 0.46963266, y: 0.261721, z: -0.14807458, w: 0.83007306}
+  m_LocalPosition: {x: 7, y: 11, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 59, y: 35, z: 0}
 --- !u!1 &966534053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,6 +3395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
@@ -3780,6 +3795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
@@ -3880,6 +3896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
@@ -4509,6 +4526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
@@ -5162,6 +5180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
@@ -5684,6 +5703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
@@ -5919,6 +5939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
@@ -5994,6 +6015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  goldSystem: {fileID: 0}
   id: 0
   productName: 
   price: 0
