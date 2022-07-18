@@ -26,6 +26,7 @@ public class GameGrid : MonoBehaviour
     //declartion for money system
     public GameObject goldSystem;
     public int fieldsPrice;
+    public GameObject seed;
 
 
     //defaut cursor when game turns on
@@ -69,7 +70,27 @@ public class GameGrid : MonoBehaviour
 
                         goldSystem.GetComponent<GoldSystem>().gold -= fieldsPrice; //once field is purchase money goes lower
                     }
+              
                 }
+
+                
+
+                if(Product.isSowing == true)
+                {
+
+                    if (_Hit.transform.tag == "field" && goldSystem.GetComponent<GoldSystem>().gold >= Product.currentProductPrice)
+                    {
+                        hitted = _Hit.transform.gameObject;
+                        Instantiate(seed, hitted.transform.position, Quaternion.identity);
+                        Destroy(hitted);
+
+                        goldSystem.GetComponent<GoldSystem>().gold -= Product.currentProductPrice;
+                    }
+
+                }
+               
+
+
             }
 
         }

@@ -1911,6 +1911,7 @@ MonoBehaviour:
   hotSpot: {x: 0, y: 0, z: 0}
   goldSystem: {fileID: 966534053}
   fieldsPrice: 15
+  seed: {fileID: 2249903395156480011, guid: 402c4e562e1f7cc4e901d8da8f8ac2eb, type: 3}
 --- !u!4 &505987756
 Transform:
   m_ObjectHideFlags: 0
@@ -3298,7 +3299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3788f46be755a4389825f01e3fc4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 125
+  gold: 1250
   goldText: {fileID: 1494811263}
 --- !u!1 &971303658
 GameObject:

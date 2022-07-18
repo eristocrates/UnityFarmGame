@@ -18,6 +18,12 @@ public class Product : MonoBehaviour
     public static int whichSeed;
     public static bool isSowing;
 
+    //new
+
+    public static int currentProductPrice;
+
+    //new end
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +50,16 @@ public class Product : MonoBehaviour
             placeSeeds = true;
             whichSeed = id;
             goldSystem.GetComponent<GoldSystem>().gold -= price;
+
+            //new
+
+            currentProductPrice = price;
+
+
+            //new end
+
+
+
             isSowing = true;
         }
     }
