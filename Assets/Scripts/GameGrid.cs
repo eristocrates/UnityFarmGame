@@ -99,6 +99,7 @@ public class GameGrid : MonoBehaviour
         if (creatingFields == true)
         {
             Cursor.SetCursor(fieldCursor, hotSpot, cursorMode);
+            Product.isSowing = false;
         }
 
 
@@ -111,6 +112,10 @@ public class GameGrid : MonoBehaviour
         {
             creatingFields = false;
             Cursor.SetCursor(seedCursor, hotSpot, cursorMode);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            ClearCursor();
         }
     }
 
@@ -126,5 +131,11 @@ public class GameGrid : MonoBehaviour
         creatingFields = false;
     }
 
+public void ClearCursor()
+{
+    creatingFields = false;
+    Product.isSowing = false;
+    Cursor.SetCursor(basicCursor, hotSpot, cursorMode);
+}
 
 }
