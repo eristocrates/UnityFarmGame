@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 921180747307026328}
   - component: {fileID: 4390745636034515753}
   - component: {fileID: 5181078387475688180}
+  - component: {fileID: 6518437163727977104}
   m_Layer: 0
   m_Name: Seed
   m_TagString: seed
@@ -98,3 +99,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6518437163727977104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2249903395156480011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53ac319fc38e8d438e043b1b920e9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  crops: {fileID: 2249903395156480011, guid: 81c58a21aa85efb4b8912440e8864b74, type: 3}
